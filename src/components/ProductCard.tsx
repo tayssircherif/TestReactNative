@@ -59,7 +59,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ item }) => {
     return (
         // Composant `TouchableOpacity` pour permettre la navigation vers les détails du produit
         <TouchableOpacity
-            onPress={() => null}  // Navigue vers l'écran des détails du produit
+            onPress={() => navigation.navigate('ProductDetail', { productId: item.id })}  // Navigue vers l'écran des détails du produit
             style={styles.productCard}  // Style pour la carte produit
         >
             <View style={styles.imageContainer}>
@@ -86,7 +86,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ item }) => {
             {/* Affichage du titre et du prix du produit */}
             <Text style={styles.productTitle}>{item.title}</Text>
             <Text style={styles.productPrice}>${item.price}</Text>
-        </TouchableOpacity >
+        </TouchableOpacity>
     );
 };
 
