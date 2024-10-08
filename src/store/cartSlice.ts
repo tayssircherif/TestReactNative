@@ -115,7 +115,11 @@ const cartSlice = createSlice({
         replaceCart: (state, action: PayloadAction<CartState>) => {
             return action.payload;  // Replace the cart state with the loaded one
         },
-
+        extraReducers: (builder) => {
+            builder.addCase(loadCartFromAsyncStorage.fulfilled, (state, action: PayloadAction<CartState>) => {
+                return action.payload;  // Replace the current state with the loaded cart
+            });
+        }
     },
 });
 

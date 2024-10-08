@@ -73,7 +73,7 @@ const ProductListScreen = () => {
                 {/* Bouton pour accéder au panier */}
                 <TouchableOpacity
                     style={styles.goToCartButton}
-                    onPress={() => null}  // Navigue vers l'écran du panier
+                    onPress={() => navigation.navigate('Cart')}  // Navigue vers l'écran du panier
                 >
                     <Text style={styles.goToCartText}>
                         Go to Cart ( {totalQuantity} items)  {/* Affiche le nombre total d'articles dans le panier */}

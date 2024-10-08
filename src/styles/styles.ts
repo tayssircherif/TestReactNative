@@ -13,7 +13,10 @@ export const productListStyles = StyleSheet.create({
         padding: SIZES.padding,
         backgroundColor: '#fff',
     },
-
+    cartInfo: {
+        alignItems: 'center',
+        marginBottom: SIZES.padding,
+    },
     totalItemsText: {
         fontSize: SIZES.fontSizeTitle,
         marginTop: 10,
@@ -65,13 +68,32 @@ export const productListStyles = StyleSheet.create({
         height: '100%',
         resizeMode: 'contain',  // Ensure the image scales correctly
     },
-
+    cartButton: {
+        position: 'absolute',  // Positioning the button over the image
+        top: 10,  // Top-right corner
+        right: 10,
+        padding: 8,  // Padding for button
+        backgroundColor: 'transparent',  // Transparent background
+        borderColor: COLORS.secondary,  // Button border color
+        borderWidth: 1,  // Border width
+        borderRadius: 20,  // Rounded corners
+        flexDirection: 'row',
+        alignItems: 'center',
+        zIndex: 1,  // Ensure the button is above the image
+    },
     heartIcon: {
         marginRight: 5,  // Reduced margin between heart and text
     },
-    cartInfo: {
-        alignItems: 'center',
-        marginBottom: SIZES.padding,
+    productTitleCart: {
+        fontSize: SIZES.fontSizeTitle,
+        fontWeight: 'bold',
+        color: COLORS.textColor,
+        textAlign: 'left',
+    },
+    productPriceCart: {
+        fontSize: SIZES.fontSizePrice,
+        color: COLORS.textColor,
+        marginBottom: 10,
     },
     goToCartButton: {
         backgroundColor: 'transparent',  // Transparent background
@@ -146,20 +168,19 @@ export const productListStyles = StyleSheet.create({
         marginVertical: 20,
         color: '#888',
     },
-    cartButton: {
-        position: 'absolute',  // Positioning the button over the image
-        top: 10,  // Top-right corner
-        right: 10,
-        padding: 8,  // Padding for button
-        backgroundColor: 'transparent',  // Transparent background
-        borderColor: COLORS.secondary,  // Button border color
-        borderWidth: 1,  // Border width
-        borderRadius: 20,  // Rounded corners
+    cartItem: {
         flexDirection: 'row',
         alignItems: 'center',
-        zIndex: 1,  // Ensure the button is above the image
+        marginBottom: 20,
+        backgroundColor: '#fff',
+        padding: 15,
+        borderRadius: 10,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.1,
+        shadowRadius: 5,
+        elevation: 3,
     },
-
     productImageCart: {
         width: 100,
         height: 100,
@@ -229,6 +250,19 @@ export const productListStyles = StyleSheet.create({
         color: '#fff',
         fontSize: 18,
         fontWeight: 'bold',
+    },
+    cartItemCart: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginBottom: 20,
+        backgroundColor: '#fff',
+        padding: 15,
+        borderRadius: 10,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.1,
+        shadowRadius: 5,
+        elevation: 3,
     },
 
     searchBarContainer: {
